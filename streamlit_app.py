@@ -28,4 +28,10 @@ st.header("Fruityvice Fruit Advice!")
 import requests as rq
 
 fruityvice_response = rq.get("https://fruityvice.com/api/fruit/watermelon")
-st.text(fruityvice_response.json())
+st.text(fruityvice_response.json()) # This just writes the code
+
+# write your own comment -what does the next line do? 
+fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
+
+# write your own comment - what does this do?
+st.dataframe(fruityvice_normalized)
