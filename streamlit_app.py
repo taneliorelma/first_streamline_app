@@ -24,10 +24,12 @@ st.dataframe(fruits_to_show)
 
 # New Section to display fruityvice api response
 st.header("Fruityvice Fruit Advice!")
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+streamlit.write('The user entered ', fruit_choice)
 
 import requests as rq
 
-fruityvice_response = rq.get("https://fruityvice.com/api/fruit/" + "kiwi")
+fruityvice_response = rq.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 # st.text(fruityvice_response.json()) # This just writes the code
 
 # write your own comment -what does the next line do? 
