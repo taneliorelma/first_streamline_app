@@ -7,12 +7,11 @@ from urllib.error import URLError
 # import streamlit as st
 st.title('My Parents New Healthy Diner')
 st.header('Breakfast menu')
-  
+
 st.text('🥣 Omega 3 and Blueberry oatmeal')
 st.text('🥗 Kale, Spinach, Rocket Smoothie')
 st.text('🐔 Hard-boiled Free-range Egg')
 st.text('🥑🍞 Avocado toast')
-
 st.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
 # import pandas as pd
@@ -61,7 +60,7 @@ if st.button('Get Fruit Load List'):
 # Allow the end user to add a fruit to the list 
 def insert_row_snowflake(new_fruit):
   with my_cnx.cursor() as my_cur:
-    my_cur.execute("insert into fruit_load_list values ('from streamlit')")
+    my_cur.execute("insert into fruit_load_list values ('"+ new_fruit +"')")
     return "Thanks for adding " + new_fruit
 
 add_my_fruit = st.text_input('What fruit would you like to add?')
