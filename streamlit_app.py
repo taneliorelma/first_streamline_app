@@ -44,7 +44,7 @@ except URLError as e:
   st.error()
 
 # import snowflake.connector
-st.header("The fruit load list contains:")
+st.header("View Our Fruit List - Add Your Fvorites!")
 # Snowflake related functions
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
