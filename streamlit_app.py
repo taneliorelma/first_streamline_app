@@ -27,7 +27,7 @@ st.header("Fruityvice Fruit Advice!")
 
 import requests as rq
 
-fruityvice_response = rq.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_response = rq.get("https://fruityvice.com/api/fruit/" + "kiwi")
 # st.text(fruityvice_response.json()) # This just writes the code
 
 # write your own comment -what does the next line do? 
