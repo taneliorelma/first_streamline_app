@@ -58,9 +58,6 @@ if st.button('Get Fruit Load List'):
   my_data_rows = get_fruit_load_list()
   st.dataframe(my_data_rows)
 
-# don't run anything past here while we troubleshoot 
-st.stop()
-
 # Allow the end user to add a fruit to the list 
 def insert_row_snowflake(new_fruit):
   with my_cnx.cursor() as my_cur:
@@ -73,6 +70,9 @@ if st.button('Add a Fruit to the List'):
   back_from_function = insert_row_snowflake(add_my_fruit)
   st.text(back_from_function)
 
+
+# don't run anything past here while we troubleshoot 
+st.stop()
 # st.write('Thanks for adding ', add_my_fruit)
 
 
